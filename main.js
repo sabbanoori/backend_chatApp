@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "*",
+    origin: "https://realtime-chat-app-woad-gamma.vercel.app",
     credentials: true,
   })
 );
