@@ -32,11 +32,10 @@ const login = async (req, res) => {
 }
 const logout = async (req, res) => {
     try {
-        res.cookie("jwt", "", { 
+        res.clearCookie("jwt", { 
             httpOnly: true,
             sameSite: "strict",
             secure: process.env.NODE_ENV === "production",
-            maxAge: 0 
         });
         return res.status(200).json({ message: "Logout successful" });
     } catch (error) {
